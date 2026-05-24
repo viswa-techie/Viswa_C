@@ -1,0 +1,932 @@
+# C Problem Solving Master Framework
+
+## Industry-Oriented Prompt System for GitHub Copilot / Claude Sonnet 4.6
+
+This document gives you a professional, industry-style preparation framework for C problem solving, especially targeted toward:
+
+* Semiconductor companies
+* Embedded systems interviews
+* Firmware interviews
+* Device driver interviews
+* System software roles
+* Performance-oriented C development
+* Low-level problem solving rounds
+* DSA rounds in product companies
+
+The goal is:
+
+* One problem → one deeply detailed document
+* Multiple solutions per problem
+* Real-world tradeoff analysis
+* Interviewer expectation analysis
+* Optimization mindset
+* Memory/performance constraints
+* Bitwise and low-level thinking
+* Mathematical reasoning
+* Debugging awareness
+* Time complexity evolution
+
+The source problem list you provided is included and categorized professionally. fileciteturn0file0L1-L95
+
+---
+
+# 1. INDUSTRY-STANDARD PREPARATION MODEL
+
+Most strong C developers prepare problems in layers:
+
+| Layer                 | Goal                                |
+| --------------------- | ----------------------------------- |
+| Basic Syntax Thinking | loops, conditions, operators        |
+| Mathematical Thinking | modulo, divisibility, prime logic   |
+| Memory Thinking       | arrays, pointers, cache awareness   |
+| Bitwise Thinking      | XOR, masking, shifts                |
+| Algorithmic Thinking  | optimization, complexity            |
+| System Thinking       | overflow, signedness, UB            |
+| Performance Thinking  | branch reduction, cache locality    |
+| Interview Thinking    | edge cases, constraints, follow-ups |
+| Production Thinking   | reusable APIs, maintainability      |
+
+This framework follows exactly this structure.
+
+---
+
+# 2. BEST INDUSTRY CATEGORIZATION
+
+Instead of random problem ordering, strong engineers group problems like this:
+
+# FOUNDATION LAYER
+
+## A. Basic Number Problems
+
+Topics:
+
+* Prime
+* Palindrome
+* Reverse number
+* Armstrong
+* Factorial
+* Fibonacci
+* Digit sum
+* GCD/LCM
+* Divisors
+
+Skills:
+
+* loops
+* modulo
+* conditionals
+* integer manipulation
+* edge cases
+
+Companies:
+
+* Qualcomm
+* Intel
+* AMD
+* NXP
+* Texas Instruments
+
+---
+
+## B. Bit Manipulation Problems
+
+Topics:
+
+* Count set bits
+* Power of 2
+* XOR tricks
+* Missing number
+* Swap without temp
+* Binary conversions
+* Maximum XOR pair
+
+Skills:
+
+* hardware-oriented thinking
+* register logic
+* masking
+* shifting
+* binary reasoning
+
+Very important for:
+
+* firmware
+* embedded
+* kernel
+* semiconductor interviews
+
+---
+
+## C. Number Theory Problems
+
+Topics:
+
+* Sieve
+* Prime factorization
+* Totient
+* Modular exponentiation
+* Modular inverse
+* Diophantine equations
+* Catalan
+* Goldbach
+
+Skills:
+
+* mathematical optimization
+* logarithmic thinking
+* overflow handling
+* modular arithmetic
+
+---
+
+## D. Array + Prefix Logic
+
+Topics:
+
+* Missing number
+* Duplicate number
+* Subarray sum
+* XOR pair
+* Inversions
+* Prefix sums
+
+Skills:
+
+* memory access patterns
+* hashing
+* optimization
+* linear scanning
+
+---
+
+## E. Dynamic Programming + Recurrence
+
+Topics:
+
+* Fibonacci optimization
+* Subset sum
+* Binary strings
+* Catalan
+* DP over subsets
+
+Skills:
+
+* state transition
+* memoization
+* recurrence relation
+* optimization
+
+---
+
+## F. Mathematical Observation Problems
+
+Topics:
+
+* XOR from 1 to N
+* Digital root
+* Trailing zeros
+* Sum formulas
+* Contribution techniques
+
+Skills:
+
+* pattern observation
+* deriving formulas
+* reducing brute force
+
+This category is heavily asked in:
+
+* Qualcomm
+* Nvidia
+* MediaTek
+* Apple silicon teams
+
+---
+
+## G. Performance-Oriented Problems
+
+Topics:
+
+* Fast exponentiation
+* Matrix exponentiation
+* Segmented sieve
+* Karatsuba
+* Range queries
+
+Skills:
+
+* asymptotic optimization
+* cache efficiency
+* reducing multiplications
+* algorithm engineering
+
+---
+
+# 3. BEST PROMPT TEMPLATE FOR ONE PROBLEM
+
+Use the following MASTER PROMPT.
+
+This is optimized for:
+
+* GitHub Copilot
+* Claude Sonnet 4.6
+* GPT-5
+* Gemini
+* Deep research generation
+
+---
+
+# MASTER PROMPT TEMPLATE
+
+```text
+You are a senior embedded systems engineer, low-level C expert, firmware architect, and competitive programming mentor.
+
+Generate a COMPLETE professional documentation for the following C problem.
+
+Problem Name:
+<PROBLEM_NAME>
+
+Target Audience:
+- Semiconductor interview preparation
+- Embedded systems engineers
+- Firmware developers
+- Low-level C programmers
+- Product company DSA rounds
+
+The document must be EXTREMELY DETAILED and INDUSTRY-ORIENTED.
+
+Follow the exact structure below.
+
+====================================================
+1. PROBLEM UNDERSTANDING
+====================================================
+
+- Explain the problem in simple English
+- Explain mathematically
+- Explain visually
+- Explain using real-world analogy
+- Explain what interviewers are testing
+- Mention common traps
+- Mention hidden constraints
+
+====================================================
+2. INPUT/OUTPUT ANALYSIS
+====================================================
+
+- Valid inputs
+- Invalid inputs
+- Boundary conditions
+- Integer overflow possibilities
+- Signed vs unsigned concerns
+- Memory constraints
+- Time constraints
+
+====================================================
+3. EDGE CASE ANALYSIS
+====================================================
+
+Cover ALL possible edge cases.
+
+Examples:
+- 0
+- 1
+- negative numbers
+- INT_MAX
+- INT_MIN
+- overflow cases
+- repeated values
+- duplicates
+- empty arrays
+- huge constraints
+
+====================================================
+4. BRUTE FORCE SOLUTION
+====================================================
+
+Provide:
+- intuition
+- dry run
+- C implementation
+- time complexity
+- space complexity
+- why it is inefficient
+
+====================================================
+5. BETTER SOLUTION
+====================================================
+
+Provide:
+- optimization idea
+- mathematical observation
+- improved implementation
+- dry run
+- complexity analysis
+
+====================================================
+6. OPTIMAL SOLUTION
+====================================================
+
+Provide:
+- best known approach
+- interview-preferred approach
+- highly optimized C code
+- branch optimization ideas
+- cache friendliness discussion
+- low-level reasoning
+- bitwise optimization if applicable
+- compiler optimization notes
+
+====================================================
+7. MULTIPLE APPROACHES
+====================================================
+
+Generate MULTIPLE independent approaches.
+
+Examples:
+- iterative
+- recursive
+- bitwise
+- mathematical
+- lookup-table
+- dynamic programming
+- memoization
+- hashing
+- sorting-based
+- two-pointer
+- sliding window
+- prefix sum
+- matrix exponentiation
+- divide and conquer
+
+For EACH approach provide:
+- intuition
+- code
+- pros
+- cons
+- interview usefulness
+
+====================================================
+8. LOW-LEVEL C DISCUSSION
+====================================================
+
+Discuss:
+- integer overflow
+- UB (undefined behavior)
+- signedness
+- modulo behavior
+- bit shifting rules
+- stack vs heap
+- recursion depth
+- cache locality
+- branch prediction
+- alignment considerations
+- compiler optimizations
+
+====================================================
+9. BITWISE INSIGHTS
+====================================================
+
+If applicable:
+- XOR tricks
+- masking
+- shifts
+- n & (n-1)
+- two's complement
+- parity logic
+- binary patterns
+
+====================================================
+10. MATHEMATICAL INSIGHTS
+====================================================
+
+Discuss:
+- derivations
+- proofs
+- modular arithmetic
+- logarithmic reductions
+- combinatorics
+- number theory
+- proof of correctness
+
+====================================================
+11. INTERVIEWER FOLLOW-UP QUESTIONS
+====================================================
+
+Generate realistic interviewer follow-ups.
+
+Examples:
+- Can this be O(1) space?
+- Can this avoid overflow?
+- Can this work for streaming data?
+- Can this be vectorized?
+- Can this work on 64-bit integers?
+- Can this be parallelized?
+- Can this avoid recursion?
+- Can this work without division/modulo?
+
+Provide detailed answers.
+
+====================================================
+12. COMMON MISTAKES
+====================================================
+
+List:
+- beginner mistakes
+- intermediate mistakes
+- advanced pitfalls
+- overflow mistakes
+- off-by-one errors
+- UB mistakes
+- incorrect complexity assumptions
+
+====================================================
+13. DEBUGGING GUIDE
+====================================================
+
+Explain:
+- how to debug
+- what variables to print
+- common failing inputs
+- tracing techniques
+- GDB ideas
+- sanitizer suggestions
+
+====================================================
+14. TEST CASE GENERATION
+====================================================
+
+Generate:
+- normal cases
+- edge cases
+- stress cases
+- random cases
+- adversarial cases
+
+====================================================
+15. PERFORMANCE BENCHMARKING
+====================================================
+
+Discuss:
+- branch prediction
+- cache effects
+- instruction count
+- recursion overhead
+- modulo cost
+- division cost
+- memory bandwidth
+
+====================================================
+16. REAL-WORLD APPLICATIONS
+====================================================
+
+Explain where this concept appears in:
+- embedded systems
+- operating systems
+- device drivers
+- networking
+- cryptography
+- DSP
+- graphics
+- compilers
+- databases
+- hardware design
+
+====================================================
+17. RELATED PROBLEMS
+====================================================
+
+Mention:
+- easier variants
+- harder variants
+- interview relatives
+- competitive programming extensions
+
+====================================================
+18. FINAL TAKEAWAYS
+====================================================
+
+Summarize:
+- key patterns
+- interview tricks
+- optimization mindset
+- reusable ideas
+
+====================================================
+19. CODE QUALITY REQUIREMENTS
+====================================================
+
+All code must:
+- compile in standard C
+- follow clean formatting
+- include comments
+- avoid undefined behavior
+- use meaningful variable names
+- include complexity notes
+- include dry-run examples
+
+====================================================
+20. ADVANCED EXTENSIONS
+====================================================
+
+If possible discuss:
+- SIMD/vectorization
+- multi-threading
+- lock-free approaches
+- GPU thinking
+- embedded constraints
+- memory-constrained systems
+- real-time systems considerations
+
+```
+
+---
+
+# 4. HOW TO USE THIS EFFECTIVELY
+
+## Best Workflow
+
+### Step 1
+
+Pick ONE problem only.
+
+Example:
+
+* Count Set Bits
+* GCD
+* Modular Exponentiation
+
+---
+
+### Step 2
+
+Use the MASTER PROMPT.
+
+---
+
+### Step 3
+
+Ask Copilot/Sonnet:
+
+```text
+Generate only sections 1–5 first.
+```
+
+Then:
+
+```text
+Continue with sections 6–10.
+```
+
+Then:
+
+```text
+Continue with sections 11–20.
+```
+
+This improves generation quality massively.
+
+---
+
+# 5. BEST INTERVIEW-ORIENTED PRIORITY ORDER
+
+For semiconductor/system interviews, prioritize:
+
+# TIER-1 (MOST IMPORTANT)
+
+## Must Master Completely
+
+* Prime checking
+* GCD/LCM
+* Bit counting
+* Power of 2
+* XOR tricks
+* Binary conversion
+* Sieve
+* Fast exponentiation
+* Modular arithmetic
+* Fibonacci optimization
+* Prefix sums
+* Hashing basics
+* Subarray problems
+* Binary search on answer
+* Overflow handling
+
+---
+
+# TIER-2
+
+## Strongly Recommended
+
+* Matrix exponentiation
+* Totient
+* Modular inverse
+* Catalan
+* Digit DP
+* Inversion counting
+* Trie XOR problems
+* Subset DP
+
+---
+
+# TIER-3
+
+## Advanced Optimization
+
+* Karatsuba
+* Segmented sieve
+* SIMD-style thinking
+* Cache-aware algorithms
+* Range decomposition
+* Advanced number theory
+
+---
+
+# 6. IMPORTANT SEMICONDUCTOR INTERVIEW EXPECTATIONS
+
+Interviewers usually check:
+
+| Skill                  | What They Observe          |
+| ---------------------- | -------------------------- |
+| Bitwise thinking       | hardware intuition         |
+| Overflow awareness     | systems maturity           |
+| Optimization mindset   | performance engineering    |
+| Edge-case handling     | production readiness       |
+| Complexity reduction   | algorithmic maturity       |
+| Clean C coding         | maintainability            |
+| Memory awareness       | embedded readiness         |
+| UB knowledge           | senior-level understanding |
+| Recursion awareness    | stack understanding        |
+| Mathematical reasoning | problem-solving depth      |
+
+---
+
+# 7. BEST EXTENSION STRATEGY
+
+After solving a problem, ALWAYS ask:
+
+```text
+Now extend this problem into:
+
+1. Embedded systems version
+2. Real-time system version
+3. Memory-constrained version
+4. Multi-threaded version
+5. Streaming-data version
+6. SIMD/vectorized version
+7. Lock-free version
+8. Large-scale distributed version
+9. Competitive programming hard version
+10. Hardware-oriented version
+```
+
+This creates deep engineering maturity.
+
+---
+
+# 8. BEST MICRO-SKILLS TO BUILD
+
+While solving every problem, train yourself to think:
+
+## A. Overflow Thinking
+
+Always ask:
+
+```c
+Will this overflow?
+```
+
+---
+
+## B. Signedness Thinking
+
+```c
+What happens for negative values?
+```
+
+---
+
+## C. Branch Thinking
+
+```c
+Can branches be reduced?
+```
+
+---
+
+## D. Memory Thinking
+
+```c
+Can this be done in-place?
+```
+
+---
+
+## E. Bitwise Thinking
+
+```c
+Can XOR/masking simplify this?
+```
+
+---
+
+## F. Mathematical Thinking
+
+```c
+Can brute force become logarithmic?
+```
+
+---
+
+# 9. BEST WAY TO PRACTICE
+
+## Recommended Flow
+
+### Round 1
+
+Solve brute force.
+
+### Round 2
+
+Optimize complexity.
+
+### Round 3
+
+Add edge cases.
+
+### Round 4
+
+Add overflow safety.
+
+### Round 5
+
+Add bitwise improvements.
+
+### Round 6
+
+Add interview follow-ups.
+
+### Round 7
+
+Add production-level cleanup.
+
+This is how strong systems engineers think.
+
+---
+
+# 10. PROFESSIONAL PREPARATION ROADMAP
+
+## Phase 1 — Foundation
+
+Solve:
+
+* problems 1–20
+
+Goal:
+
+* syntax + logic fluency
+
+---
+
+## Phase 2 — Bitwise + Math
+
+Solve:
+
+* 21–50
+
+Goal:
+
+* optimization mindset
+
+---
+
+## Phase 3 — Advanced DSA + Number Theory
+
+Solve:
+
+* 51–75
+
+Goal:
+
+* algorithmic maturity
+
+---
+
+## Phase 4 — Performance + Systems
+
+Solve:
+
+* 76–100
+
+Goal:
+
+* elite interview readiness
+
+---
+
+# 11. GOLDEN RULES
+
+## Rule 1
+
+Never memorize blindly.
+
+Understand:
+
+* WHY it works
+* WHY optimized
+* WHY interviewer asks it
+
+---
+
+## Rule 2
+
+Every problem should teach:
+
+* one algorithmic idea
+* one optimization idea
+* one systems idea
+* one debugging idea
+* one edge-case lesson
+
+---
+
+## Rule 3
+
+For semiconductor interviews:
+
+Bitwise + overflow + optimization + edge cases are more important than fancy STL-style tricks.
+
+---
+
+## Rule 4
+
+Always compare:
+
+| Approach | Time | Space | Readability | Interview Value |
+| -------- | ---- | ----- | ----------- | --------------- |
+
+---
+
+# 12. FINAL ELITE-LEVEL PROMPT
+
+Use this when you want MAXIMUM DEPTH.
+
+```text
+Act as a principal firmware engineer, systems architect, low-level C expert, and semiconductor interview mentor.
+
+Generate an extremely detailed engineering-grade documentation for the problem:
+
+<PROBLEM_NAME>
+
+The document must include:
+- brute force
+- optimized
+- best possible solution
+- multiple independent approaches
+- mathematical proofs
+- bitwise reasoning
+- low-level memory analysis
+- undefined behavior discussion
+- overflow handling
+- branch optimization
+- cache efficiency
+- edge cases
+- debugging methodology
+- interviewer follow-up questions
+- embedded systems perspective
+- performance benchmarking
+- production-quality C code
+- real-world applications
+- competitive programming extensions
+- systems-level tradeoffs
+
+Target the explanation toward:
+- semiconductor interviews
+- embedded firmware
+- systems programming
+- kernel-level thinking
+- performance-critical engineering
+
+The output should feel like an internal engineering training document from a top semiconductor company.
+```
+
+---
+
+# 13. FINAL NOTE
+
+The difference between:
+
+* average candidates
+* strong candidates
+* elite systems engineers
+
+is usually:
+
+| Level        | Thinking Style                                                  |
+| ------------ | --------------------------------------------------------------- |
+| Beginner     | solve problem                                                   |
+| Intermediate | optimize problem                                                |
+| Advanced     | analyze tradeoffs                                               |
+| Senior       | think about systems impact                                      |
+| Elite        | think about hardware + compiler + memory + scalability together |
+
+This framework is designed to push you toward the last category.
